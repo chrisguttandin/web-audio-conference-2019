@@ -1,0 +1,32 @@
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 110%;
+    margin: 0 -3.9vw;
+}
+
+@media (min-aspect-ratio: 4/3) {
+
+    h1 {
+        margin: 0 -5.2vh;
+    }
+
+}
+
+.stripe {
+    background-image: linear-gradient(transparent 33%, #272834 33%, #272834 67%, transparent 67%), url('/assets/apples-and-oranges.jpg');
+    background-position: center;
+    background-size: cover;
+    display: block;
+    line-height: 366%;
+}
+
+.footnote {
+    color: #555;
+    font-size: 30%;
+    text-align: center;
+}

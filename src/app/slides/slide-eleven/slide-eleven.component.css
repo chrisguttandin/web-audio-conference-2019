@@ -1,0 +1,26 @@
+h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.stage {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.stage-prop {
+    position: absolute;
+}
+
+.label {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.footnote {
+    color: #555;
+    font-size: 30%;
+}

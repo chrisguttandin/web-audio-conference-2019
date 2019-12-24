@@ -1,0 +1,16 @@
+{
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  },
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": false,
+    "declarationMap": false,
+    "downlevelIteration": true,
+    "module": "esnext",
+    "outDir": "../out-tsc/app",
+    "target": "es2015"
+  },
+  "extends": "tsconfig-holy-grail/src/tsconfig-browser"
+}

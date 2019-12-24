@@ -1,0 +1,35 @@
+{
+    "assetGroups": [
+        {
+            "installMode": "prefetch",
+            "name": "app",
+            "resources": {
+                "files": [
+                    "/start.html",
+                    "/*.css",
+                    "/*.js"
+                ]
+            }
+        }, {
+            "installMode": "lazy",
+            "name": "assets",
+            "resources": {
+                "files": [
+                    "/assets/**"
+                ]
+            },
+            "updateMode": "prefetch"
+        }, {
+            "installMode": "lazy",
+            "name": "fonts",
+            "resources": {
+                "urls": [
+                    "https://fonts.googleapis.com/css",
+                    "https://fonts.gstatic.com"
+                ]
+            },
+            "updateMode": "lazy"
+        }
+    ],
+    "index": "/start.html"
+}

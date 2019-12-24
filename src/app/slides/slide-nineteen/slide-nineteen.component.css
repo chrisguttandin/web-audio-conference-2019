@@ -1,0 +1,11 @@
+blockquote {
+    font-size: 80%;
+    font-style: italic;
+    margin: 0;
+}
+
+.footnote {
+    color: #555;
+    font-size: 30%;
+    font-style: normal;
+}
