@@ -1,4 +1,9 @@
 module.exports = {
+    'assets': [
+        'build/web-audio-conference-2019/**.ico',
+        'build/web-audio-conference-2019/**.jpg',
+        'build/web-audio-conference-2019/**.png'
+    ],
     'runtime': [
         'build/web-audio-conference-2019/runtime*.js'
     ],

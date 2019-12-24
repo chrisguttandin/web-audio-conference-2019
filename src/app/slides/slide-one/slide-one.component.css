@@ -18,7 +18,7 @@ h1 {
 }
 
 .stripe {
-    background-image: linear-gradient(transparent 33%, #272834 33%, #272834 67%, transparent 67%), url('/assets/apples-and-oranges.jpg');
+    background-image: linear-gradient(transparent 33%, #272834 33%, #272834 67%, transparent 67%), url('../../../assets/apples-and-oranges.jpg');
     background-position: center;
     background-size: cover;
     display: block;

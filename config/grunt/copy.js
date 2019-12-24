@@ -9,6 +9,16 @@ module.exports = {
             }
         ]
     },
+    assets: {
+        files: [
+            {
+                cwd: 'build/web-audio-conference-2019/',
+                dest: 'build/web-audio-conference-2019/assets/',
+                expand: true,
+                src: [ '*.ico', '*.jpg', '*.png' ]
+            }
+        ]
+    },
     html: {
         files: [
             {
