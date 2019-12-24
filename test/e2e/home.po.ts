@@ -9,8 +9,8 @@ export class HomePage {
 
         // @todo Chrome does treat a <span> tag as line break but Safari doesn't which is why it is done manually here.
         return innerHtml
-            .replace(/<span[^>]*>/, ' ')
-            .replace(/<\/span>/, '');
+            .replace(/<span[^>]*>/g, ' ')
+            .replace(/<\/span>/g, '');
     }
 
     public getSubHeadline (): promise.Promise<string> {
