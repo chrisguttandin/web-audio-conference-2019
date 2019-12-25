@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1577215098525,
+  "timestamp": 1577236180680,
   "index": "/web-audio-conference-2019/start.html",
   "assetGroups": [
     {
@@ -8,7 +8,7 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/web-audio-conference-2019/scripts/4.ad005b8fc5e5969ecc8c.js",
+        "/web-audio-conference-2019/scripts/4.537b8f2ef6908eba999f.js",
         "/web-audio-conference-2019/scripts/main.a9b0488a0c647dd143b7.js",
         "/web-audio-conference-2019/scripts/polyfills.858e2831e5b8adbf6bbd.js",
         "/web-audio-conference-2019/scripts/scripts.2e1ce7e02614f3c7a0cf.js",
@@ -22,7 +22,7 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "/web-audio-conference-2019/undefined"
+        "/web-audio-conference-2019/assets/apples-and-oranges.5ded33a01c3be56d4227.jpg"
       ],
       "patterns": []
     },
@@ -39,12 +39,12 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2019/scripts/4.ad005b8fc5e5969ecc8c.js": "59da0467f0c1bc109aeb5745aa8c29d1835a853c",
-    "/web-audio-conference-2019/undefined": "a39cd6b9db03d767def18e9ca4223b6e62c17324",
+    "/web-audio-conference-2019/scripts/4.537b8f2ef6908eba999f.js": "d56b990a0400e6d3b2b964e1d9864ff9635f3f2e",
+    "/web-audio-conference-2019/assets/apples-and-oranges.5ded33a01c3be56d4227.jpg": "a39cd6b9db03d767def18e9ca4223b6e62c17324",
     "/web-audio-conference-2019/scripts/main.a9b0488a0c647dd143b7.js": "8e6df7d2603026474c212bf0181332bfaf931b47",
     "/web-audio-conference-2019/scripts/polyfills.858e2831e5b8adbf6bbd.js": "08c97940ba93ccc4121b85df6911d86011ef3fb8",
     "/web-audio-conference-2019/scripts/scripts.2e1ce7e02614f3c7a0cf.js": "a578a59a82052d2001b770646c1738ae7cb19bd6",
-    "/web-audio-conference-2019/start.html": "1944f0bbae342bebaa421f5b11b57e033c45008e",
+    "/web-audio-conference-2019/start.html": "dbd0f32ced906a19cecec202bfaba5bcdbfd24f3",
     "/web-audio-conference-2019/styles/styles.8099bf88f2e460925782.css": "e6b4c3a15ce49a396ddc4b71dbad4a4b09e910a1"
   },
   "navigationUrls": [
