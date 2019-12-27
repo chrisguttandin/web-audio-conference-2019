@@ -1,6 +1,7 @@
 const cspBuilder = require('content-security-policy-builder');
 const cspProductionConfig = require('../csp/production');
 const crypto = require('crypto');
+const { dirname, relative } = require('path');
 const fs = require('fs');
 
 // eslint-disable-next-line padding-line-between-statements
@@ -41,29 +42,33 @@ module.exports = (grunt) => {
             options: {
                 patterns: [ {
                     match: /(?<filename>[\d\-a-z]+)\.(?<hash>[\da-f]{20})\.(?<extension>ico|jpg|png)/g,
-                    replacement: (_, filename, hash, extension) => {
-                        if (grunt.file.exists(`build/web-audio-conference-2019/assets/${ filename }.${ extension }`)) {
-                            grunt.file.delete(`build/web-audio-conference-2019/assets/${ filename }.${ extension }`);
+                    replacement: (_1, filename, hash, extension, _2, _3, _4, source) => {
+                        const cwd = 'build/web-audio-conference-2019';
+
+                        if (grunt.file.exists(`${ cwd }/assets/${ filename }.${ extension }`)) {
+                            grunt.file.delete(`${ cwd }/assets/${ filename }.${ extension }`);
                         }
 
-                        return `assets/${ filename }.${ hash }.${ extension }`;
+                        return relative(dirname(source), `${ cwd }/assets/${ filename }.${ hash }.${ extension }`);
                     }
                 }, {
                     match: /assets\/(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
-                    replacement: (_, filename, extension) => {
-                        if (grunt.file.exists(`build/web-audio-conference-2019/assets/${ filename }.${ extension }`)) {
-                            const hash = computeHashOfFile(`build/web-audio-conference-2019/assets/${ filename }.${ extension }`, 'sha1', 'hex').slice(0, 20);
+                    replacement: (_1, filename, extension, _2, _3, _4, source) => {
+                        const cwd = 'build/web-audio-conference-2019';
+
+                        if (grunt.file.exists(`${ cwd }/assets/${ filename }.${ extension }`)) {
+                            const hash = computeHashOfFile(`${ cwd }/assets/${ filename }.${ extension }`, 'sha1', 'hex').slice(0, 20);
 
                             grunt.file.copy(
-                                `build/web-audio-conference-2019/assets/${ filename }.${ extension }`,
-                                `build/web-audio-conference-2019/assets/${ filename }.${ hash }.${ extension }`
+                                `${ cwd }/assets/${ filename }.${ extension }`,
+                                `${ cwd }/assets/${ filename }.${ hash }.${ extension }`
                             );
-                            grunt.file.delete(`build/web-audio-conference-2019/assets/${ filename }.${ extension }`);
+                            grunt.file.delete(`${ cwd }/assets/${ filename }.${ extension }`);
 
-                            return `assets/${ filename }.${ hash }.${ extension }`;
+                            return relative(dirname(source), `${ cwd }/assets/${ filename }.${ hash }.${ extension }`);
                         }
 
-                        return grunt.file.expand({ cwd: 'build/web-audio-conference-2019', ext: extension }, `assets/${ filename }.*`)[0];
+                        return relative(dirname(source), `${ cwd }/${ grunt.file.expand({ cwd, ext: extension }, `assets/${ filename }.*`)[0] }`);
                     }
                 } ]
             }
@@ -189,6 +194,27 @@ module.exports = (grunt) => {
                     match: /"\/web-audio-conference-2019\/(?<filename>index|start)\.html":\s"[\da-z]+"/g,
                     replacement: (_, filename) => {
                         return `"/web-audio-conference-2019/${ filename }.html": "${ computeHashOfFile(`build/web-audio-conference-2019/${ filename }.html`, 'sha1', 'hex') }"`;
+                    }
+                } ]
+            }
+        },
+        'references': {
+            files: {
+                './': [
+                    'build/web-audio-conference-2019-server/**/*.js'
+                ]
+            },
+            options: {
+                patterns: [ {
+                    match: /(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
+                    replacement: (match, filename, extension) => {
+                        const pathOfHashedFile = grunt.file.expand({ cwd: 'build/web-audio-conference-2019', ext: extension }, `assets/${ filename }.*`)[0];
+
+                        if (pathOfHashedFile !== undefined && grunt.file.exists(`build/web-audio-conference-2019-server/${ filename }.${ extension }`)) {
+                            return pathOfHashedFile;
+                        }
+
+                        return match;
                     }
                 } ]
             }
