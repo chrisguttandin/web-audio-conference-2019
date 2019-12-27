@@ -49,7 +49,11 @@ module.exports = (grunt) => {
                             grunt.file.delete(`${ cwd }/assets/${ filename }.${ extension }`);
                         }
 
-                        return relative(dirname(source), `${ cwd }/assets/${ filename }.${ hash }.${ extension }`);
+                        if (source.endsWith('.css')) {
+                            return relative(dirname(source), `${ cwd }/assets/${ filename }.${ hash }.${ extension }`);
+                        }
+
+                        return `assets/${ filename }.${ hash }.${ extension }`;
                     }
                 }, {
                     match: /assets\/(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
@@ -65,10 +69,18 @@ module.exports = (grunt) => {
                             );
                             grunt.file.delete(`${ cwd }/assets/${ filename }.${ extension }`);
 
-                            return relative(dirname(source), `${ cwd }/assets/${ filename }.${ hash }.${ extension }`);
+                            if (source.endsWith('.css')) {
+                                return relative(dirname(source), `${ cwd }/assets/${ filename }.${ hash }.${ extension }`);
+                            }
+
+                            return `assets/${ filename }.${ hash }.${ extension }`;
                         }
 
-                        return relative(dirname(source), `${ cwd }/${ grunt.file.expand({ cwd, ext: extension }, `assets/${ filename }.*`)[0] }`);
+                        if (source.endsWith('.css')) {
+                            return relative(dirname(source), `${ cwd }/${ grunt.file.expand({ cwd, ext: extension }, `assets/${ filename }.*`)[0] }`);
+                        }
+
+                        return `${ grunt.file.expand({ cwd, ext: extension }, `assets/${ filename }.*`)[0] }`;
                     }
                 } ]
             }
@@ -201,7 +213,7 @@ module.exports = (grunt) => {
         'references': {
             files: {
                 './': [
-                    'build/web-audio-conference-2019-server/**/*.js'
+                    'build/web-audio-conference-2019/**/index.html'
                 ]
             },
             options: {
@@ -210,11 +222,11 @@ module.exports = (grunt) => {
                     replacement: (match, filename, extension) => {
                         const pathOfHashedFile = grunt.file.expand({ cwd: 'build/web-audio-conference-2019', ext: extension }, `assets/${ filename }.*`)[0];
 
-                        if (pathOfHashedFile !== undefined && grunt.file.exists(`build/web-audio-conference-2019-server/${ filename }.${ extension }`)) {
-                            return pathOfHashedFile;
+                        if (pathOfHashedFile === undefined) {
+                            return match;
                         }
 
-                        return match;
+                        return pathOfHashedFile;
                     }
                 } ]
             }
