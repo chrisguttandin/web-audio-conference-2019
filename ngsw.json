@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1577469621252,
+  "timestamp": 1578656807444,
   "index": "/web-audio-conference-2019/start.html",
   "assetGroups": [
     {
@@ -8,7 +8,7 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/web-audio-conference-2019/scripts/4.e0f06c605135c98bb944.js",
+        "/web-audio-conference-2019/scripts/4.bee4d8016e20c51a4cd4.js",
         "/web-audio-conference-2019/scripts/main.0270adbf45dd8f1fa0b3.js",
         "/web-audio-conference-2019/scripts/polyfills.858e2831e5b8adbf6bbd.js",
         "/web-audio-conference-2019/scripts/scripts.2e1ce7e02614f3c7a0cf.js",
@@ -39,12 +39,12 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2019/scripts/4.e0f06c605135c98bb944.js": "51cd56f8e7802eb83a711cf242b1fa516db82e5c",
+    "/web-audio-conference-2019/scripts/4.bee4d8016e20c51a4cd4.js": "45e39d7c9f4f5211c8ba8e48f0a154c6b557ef81",
     "/web-audio-conference-2019/assets/apples-and-oranges.5ded33a01c3be56d4227.jpg": "a39cd6b9db03d767def18e9ca4223b6e62c17324",
     "/web-audio-conference-2019/scripts/main.0270adbf45dd8f1fa0b3.js": "96350cdad4e3bb09f7dc59428c6005d4c049f820",
     "/web-audio-conference-2019/scripts/polyfills.858e2831e5b8adbf6bbd.js": "08c97940ba93ccc4121b85df6911d86011ef3fb8",
     "/web-audio-conference-2019/scripts/scripts.2e1ce7e02614f3c7a0cf.js": "a578a59a82052d2001b770646c1738ae7cb19bd6",
-    "/web-audio-conference-2019/start.html": "32414421ed9b85f4978819986c06b2975570923f",
+    "/web-audio-conference-2019/start.html": "70e6af775c4ebb834d98a69586c75074c21283c6",
     "/web-audio-conference-2019/styles/styles.8099bf88f2e460925782.css": "e6b4c3a15ce49a396ddc4b71dbad4a4b09e910a1"
   },
   "navigationUrls": [
