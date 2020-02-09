@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1579090127390,
+  "timestamp": 1581266311908,
   "index": "/web-audio-conference-2019/start.html",
   "assetGroups": [
     {
@@ -8,9 +8,9 @@
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "/web-audio-conference-2019/scripts/4.5c4927eebb998ee196c1.js",
-        "/web-audio-conference-2019/scripts/main.0270adbf45dd8f1fa0b3.js",
-        "/web-audio-conference-2019/scripts/polyfills.858e2831e5b8adbf6bbd.js",
+        "/web-audio-conference-2019/scripts/4.2d7851625329731afcdc.js",
+        "/web-audio-conference-2019/scripts/main.0d5bd514a298a096f032.js",
+        "/web-audio-conference-2019/scripts/polyfills.c0594e7aada16583f4ce.js",
         "/web-audio-conference-2019/scripts/scripts.2e1ce7e02614f3c7a0cf.js",
         "/web-audio-conference-2019/start.html",
         "/web-audio-conference-2019/styles/styles.3d0f6c406cbfc6638959.css"
@@ -39,13 +39,13 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2019/scripts/4.5c4927eebb998ee196c1.js": "d24c4d1bbb8eb94cf6018b18f3d3388629cc0b76",
+    "/web-audio-conference-2019/scripts/4.2d7851625329731afcdc.js": "29141dfb09edf62a4bfdbb7f2ceef56bc3961ecd",
     "/web-audio-conference-2019/assets/apples-and-oranges.5ded33a01c3be56d4227.jpg": "a39cd6b9db03d767def18e9ca4223b6e62c17324",
-    "/web-audio-conference-2019/scripts/main.0270adbf45dd8f1fa0b3.js": "96350cdad4e3bb09f7dc59428c6005d4c049f820",
-    "/web-audio-conference-2019/scripts/polyfills.858e2831e5b8adbf6bbd.js": "08c97940ba93ccc4121b85df6911d86011ef3fb8",
-    "/web-audio-conference-2019/scripts/scripts.2e1ce7e02614f3c7a0cf.js": "a578a59a82052d2001b770646c1738ae7cb19bd6",
-    "/web-audio-conference-2019/start.html": "5eafd58af4575c92f23240c8838c1ef178f6837e",
-    "/web-audio-conference-2019/styles/styles.3d0f6c406cbfc6638959.css": "e64075ba564c6d87199707d1a270772965a7230c"
+    "/web-audio-conference-2019/scripts/main.0d5bd514a298a096f032.js": "adfe921b6054d04015563a0b7c999a4f16146016",
+    "/web-audio-conference-2019/scripts/polyfills.c0594e7aada16583f4ce.js": "fb929778c5522826f6d47a18de7fb1edbdcff3d0",
+    "/web-audio-conference-2019/scripts/scripts.2e1ce7e02614f3c7a0cf.js": "41f2ca5aad759554b8f58a7e8fd6766555d9644e",
+    "/web-audio-conference-2019/start.html": "f9138e3516b7f030dc47e1639b122b62f95bf910",
+    "/web-audio-conference-2019/styles/styles.3d0f6c406cbfc6638959.css": "cdc97b4724c1987163675db13ed26cce509e2599"
   },
   "navigationUrls": [
     {
