@@ -43,7 +43,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /(?<filename>[\d\-a-z]+)\.(?<hash>[\da-f]{20})\.(?<extension>ico|jpg|png)/g,
+                    match: /(?<filename>[\da-z-]+)\.(?<hash>[\da-f]{20})\.(?<extension>ico|jpg|png)/g,
                     replacement: (_1, filename, hash, extension, _2, _3, _4, source) => {
                         const cwd = 'build/web-audio-conference-2019';
 
@@ -58,7 +58,7 @@ module.exports = (grunt) => {
                         return `assets/${ filename }.${ hash }.${ extension }`;
                     }
                 }, {
-                    match: /assets\/(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
+                    match: /assets\/(?<filename>[\da-z-]+)\.(?<extension>ico|jpg|png)/g,
                     replacement: (_1, filename, extension, _2, _3, _4, source) => {
                         const cwd = 'build/web-audio-conference-2019';
 
@@ -174,13 +174,13 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /assets\/(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
+                    match: /assets\/(?<filename>[\da-z-]+)\.(?<extension>ico|jpg|png)/g,
                     replacement: (_, filename, extension) => grunt.file.expand({ cwd: 'build/web-audio-conference-2019', ext: extension }, `assets/${ filename }.*`)[0]
                 }, {
-                    match: /\/(?<filename>[\d\-a-z]+\.[\da-z]*\.css)"/g,
+                    match: /\/(?<filename>[\da-z-]+\.[\da-z]*\.css)"/g,
                     replacement: (_, filename) => `/styles/${ filename }"`
                 }, {
-                    match: /\/(?<filename>[\d\-a-z]*\.[\da-z]*\.js)"/g,
+                    match: /\/(?<filename>[\da-z-]*\.[\da-z]*\.js)"/g,
                     replacement: (_, filename) => `/scripts/${ filename }"`
                 }, {
                     match: /\s*"\/web-audio-conference-2019(?:\/scripts)?\/runtime(?:-es(?:2015|5))?.[\da-z]*\.js",/g,
@@ -217,7 +217,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /(?<filename>[\d\-a-z]+)\.(?<extension>ico|jpg|png)/g,
+                    match: /(?<filename>[\da-z-]+)\.(?<extension>ico|jpg|png)/g,
                     replacement: (match, filename, extension) => {
                         const pathOfHashedFile = grunt.file.expand({ cwd: 'build/web-audio-conference-2019', ext: extension }, `assets/${ filename }.*`)[0];
 
@@ -257,7 +257,7 @@ module.exports = (grunt) => {
             },
             options: {
                 patterns: [ {
-                    match: /<script\ssrc="(?<filename>[\d\-a-z]+\.[\da-z]+\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="(?<initialHash>sha384-[\d+/A-Za-z]+=*)"><\/script>/g,
+                    match: /<script\ssrc="(?<filename>[\da-z-]+\.[\da-z]+\.js)"\scrossorigin="anonymous"(?<moduleAttribute>\s(?:nomodule|type="module"))?\sdefer\sintegrity="(?<initialHash>sha384-[\d+/A-Za-z]+=*)"><\/script>/g,
                     replacement: (match, filename, moduleAttribute, initialHash) => {
                         const updatedHash = (/main(?:-es(?:2015|5))?\.[\da-z]+\.js/.test(filename)) ?
                             `sha384-${ computeHashOfFile(`build/web-audio-conference-2019/scripts/${ filename }`, 'sha384', 'base64') }` :
