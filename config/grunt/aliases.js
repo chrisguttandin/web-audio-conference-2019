@@ -36,7 +36,6 @@ module.exports = {
         'clean:styles',
         'replace:chunks',
         'replace:csp-production',
-        'copy:html',
         'sh:prerender',
         'replace:references',
         'htmlmin',

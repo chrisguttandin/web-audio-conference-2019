@@ -19,14 +19,6 @@ module.exports = {
             }
         ]
     },
-    html: {
-        files: [
-            {
-                dest: 'build/web-audio-conference-2019/start.html',
-                src: 'build/web-audio-conference-2019/index.html'
-            }
-        ]
-    },
     scripts: {
         files: [
             {
