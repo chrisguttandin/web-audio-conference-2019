@@ -109,8 +109,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
 
             this._index = newIndex;
 
-            if (direction === 'forwards'
-                    && (newIndex === 9)) {
+            if (direction === 'forwards' && newIndex === 9) {
                 this.transition = { params: NO_TRANSITION_PARAMS, value: newIndex };
             } else {
                 const nativeWindow = this._windowService.nativeWindow;
