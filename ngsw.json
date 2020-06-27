@@ -1,17 +1,20 @@
 {
   "configVersion": 1,
-  "timestamp": 1593198400278,
+  "timestamp": 1593294420943,
   "index": "/web-audio-conference-2019/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [
-        "/web-audio-conference-2019/scripts/4.3cab41455c61c0981327.js",
+        "/web-audio-conference-2019/scripts/4.2248ddc99ebc2babbb01.js",
         "/web-audio-conference-2019/index.html",
-        "/web-audio-conference-2019/scripts/main.7f3e52cba3fcf1659626.js",
-        "/web-audio-conference-2019/scripts/polyfills.75a877e5f3cccabb544e.js",
+        "/web-audio-conference-2019/scripts/main.9eacbb17ecb1d53ea86e.js",
+        "/web-audio-conference-2019/scripts/polyfills.36bfdfbff157f3dc0dac.js",
         "/web-audio-conference-2019/scripts/scripts.1dade9dd63b52cc23955.js",
         "/web-audio-conference-2019/styles/styles.711c03d16d5e6d48accd.css"
       ],
@@ -21,6 +24,9 @@
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [
         "/web-audio-conference-2019/assets/apples-and-oranges.2cbcf081b2ce3c1f5ada.jpg"
       ],
@@ -30,6 +36,9 @@
       "name": "fonts",
       "installMode": "lazy",
       "updateMode": "lazy",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
       "urls": [],
       "patterns": [
         "https:\\/\\/fonts\\.googleapis\\.com\\/css",
@@ -39,11 +48,11 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/web-audio-conference-2019/scripts/4.3cab41455c61c0981327.js": "0fb300a6286820439f85d8420b8de6d2e5e947f4",
+    "/web-audio-conference-2019/scripts/4.2248ddc99ebc2babbb01.js": "61633364647a9c24cf48ab7e39c2f00c8980117a",
     "/web-audio-conference-2019/assets/apples-and-oranges.2cbcf081b2ce3c1f5ada.jpg": "a39cd6b9db03d767def18e9ca4223b6e62c17324",
-    "/web-audio-conference-2019/index.html": "687b05c724fca7cf1d83585bcb5d801a6b461d43",
-    "/web-audio-conference-2019/scripts/main.7f3e52cba3fcf1659626.js": "5348a02d103e45cd11262282e170ac530c8cb7dd",
-    "/web-audio-conference-2019/scripts/polyfills.75a877e5f3cccabb544e.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
+    "/web-audio-conference-2019/index.html": "9c81aba4039547f26caf649695f09942ce56c5be",
+    "/web-audio-conference-2019/scripts/main.9eacbb17ecb1d53ea86e.js": "7128f30a79ed01f8c2ad73a7313adc6522ad3c2e",
+    "/web-audio-conference-2019/scripts/polyfills.36bfdfbff157f3dc0dac.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
     "/web-audio-conference-2019/scripts/scripts.1dade9dd63b52cc23955.js": "ab1bef7f2bced76497d70482eb1cdd535a942d48",
     "/web-audio-conference-2019/styles/styles.711c03d16d5e6d48accd.css": "f7d55e188db34f2e551497296977c90c80fb4401"
   },
