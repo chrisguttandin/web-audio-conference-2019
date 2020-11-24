@@ -14,6 +14,6 @@ export class HomePage {
     }
 
     public async navigateTo(): Promise<unknown> {
-        return browser.get(env.IS_SMOKE_TEST === 'true' ? '/web-audio-conference-2019' : '/');
+        return browser.get(browser.baseUrl);
     }
 }
