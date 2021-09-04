@@ -263,11 +263,11 @@ module.exports = (grunt) => {
             options: {
                 patterns: [
                     {
-                        match: /(?<filename>[\da-z-]+)\.(?<extension>ico|jpg|png)/g,
+                        match: /(?<filename>(?:assets\/)?[\da-z-]+)\.(?<extension>ico|jpg|png)/g,
                         replacement: (match, filename, extension) => {
                             const pathOfHashedFile = grunt.file.expand(
                                 { cwd: 'build/web-audio-conference-2019', ext: extension },
-                                `assets/${filename}.*`
+                                filename.startsWith('assets/') ? `${filename}.*` : `assets/${filename}.*`
                             )[0];
 
                             if (pathOfHashedFile === undefined) {
