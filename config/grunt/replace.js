@@ -60,19 +60,6 @@ module.exports = (grunt) => {
                 ]
             }
         },
-        'bundle': {
-            files: {
-                './': ['build/web-audio-conference-2019/main*.js']
-            },
-            options: {
-                patterns: [
-                    {
-                        match: /"\/ngsw-worker\.js"/g,
-                        replacement: '"/web-audio-conference-2019/ngsw-worker.js"'
-                    }
-                ]
-            }
-        },
         'csp-production': {
             files: {
                 'build/web-audio-conference-2019/index.html': ['build/web-audio-conference-2019/index.html']
