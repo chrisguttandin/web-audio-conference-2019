@@ -115,7 +115,7 @@ export class SlidesComponent implements OnDestroy, OnInit {
                 this.transition = { params: NO_TRANSITION_PARAMS, value: newIndex };
             } else {
                 const nativeWindow = this._windowService.nativeWindow;
-                const isPortrait = nativeWindow !== null && nativeWindow.innerWidth / nativeWindow.innerHeight < 4 / 3;
+                const isPortrait = nativeWindow !== null && nativeWindow.innerWidth / nativeWindow.innerHeight <= 4 / 3;
                 const distance = isPortrait ? '108%' : '108vw';
 
                 this.transition = {
