@@ -5,11 +5,9 @@ module.exports = {
         'sh:verify',
         'clean:source-maps',
         'copy:404',
-        'replace:runtime',
         'clean:runtime',
         'replace:assets',
         'replace:csp-production',
-        'sh:prerender',
         'replace:references',
         'htmlmin',
         'replace:manifest'
