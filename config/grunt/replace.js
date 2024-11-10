@@ -153,30 +153,6 @@ module.exports = (grunt) => {
                     }
                 ]
             }
-        },
-        'references': {
-            files: {
-                './': ['build/web-audio-conference-2019/**/index.html']
-            },
-            options: {
-                patterns: [
-                    {
-                        match: /assets\/(?<filename>[\da-z-]+)\.(?<extension>ico|jpg|png)/g,
-                        replacement: (match, filename, extension) => {
-                            const pathOfHashedFile = grunt.file.expand(
-                                { cwd: 'build/web-audio-conference-2019', ext: extension },
-                                `assets/${filename}.*`
-                            )[0];
-
-                            if (pathOfHashedFile === undefined) {
-                                return match;
-                            }
-
-                            return pathOfHashedFile;
-                        }
-                    }
-                ]
-            }
         }
     };
 };

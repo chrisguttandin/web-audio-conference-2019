@@ -7,7 +7,6 @@ module.exports = {
         'copy:404',
         'replace:assets',
         'replace:csp-production',
-        'replace:references',
         'htmlmin',
         'replace:manifest'
     ],
